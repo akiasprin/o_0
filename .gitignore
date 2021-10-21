@@ -1,0 +1,19 @@
+# 排除文件目录
+*.php
+*.html
+*.xml
+*.po
+*.mo
+*.json
+*.txt
+*.htaccess
+*.zip
+*.gz
+*.br
+*.phtml
+*.html.gz
+*.bmp
+*.md
+*.pdf
+/wp-content/cache/
+/wp-content/upload/
