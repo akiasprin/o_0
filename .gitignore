@@ -16,4 +16,4 @@
 *.md
 *.pdf
 /wp-content/cache/
-/wp-content/upload/
+/wp-content/uploads/
