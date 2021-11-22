@@ -331,6 +331,7 @@ optgroup {
 .entry-meta .post-edit-link-meta a:before,
 .entry-meta .parent-post-link a:before,
 .entry-meta .full-size-link a:before,
+.comment-list .comment-meta .comment-metadata:before,
 .post-label:before,
 .more-link:before,
 .search-submit:before {
@@ -2340,16 +2341,11 @@ body.has-responsive-menu {
 
 /* Comment Avatar */
 .comment-list .comment-author .avatar {
-  border: 1px solid #ebebeb;
   display: block;
   margin: 0 0 15px;
   margin: 0 0 0.9375rem;
   padding: 2px;
   padding: 0.125rem;
-}
-
-.comment-list .bypostauthor .comment-author .avatar {
-  border: 1px solid #d9d9d9;
 }
 
 .comment-list .comment-author .avatar {
@@ -2364,10 +2360,24 @@ body.has-responsive-menu {
 
 /* Comment Meta */
 .comment-list .comment-meta {
-  font-size: 12px;
-  font-size: 0.75rem;
+  font-size: 16px;
+  font-size: 1rem;
   margin-bottom: 15px;
   margin-bottom: 0.9375rem;
+}
+
+.comment-list .comment-meta .comment-author {
+  display: inline;
+}
+
+.comment-list .comment-meta .comment-metadata {
+  display: inline;
+  margin-left: 2px;
+}
+
+.comment-list .comment-meta .comment-metadata:before {
+  content: '\f044';
+  font-weight: lighter;
 }
 
 .comment-list .comment-content {
@@ -2377,8 +2387,10 @@ body.has-responsive-menu {
 }
 
 .comment-list .reply {
-  font-size: 12px;
-  font-size: 0.75rem;
+  font-size: 16px;
+  font-size: 1rem;
+  margin-top: 15px;
+  margin-top: 0.9375rem;
   text-transform: uppercase;
 }
 
@@ -2387,13 +2399,18 @@ body.has-responsive-menu {
 }
 
 .comment-list .comment-author .fn a,
-.comment-list .comment-author .fn a:visited {
+.comment-list .comment-author .fn a:visited,
+.comment-list .comment-metadata a,
+.comment-list .comment-metadata a:visited {
   color: #333;
 }
 
 .comment-list .comment-author .fn a:hover,
 .comment-list .comment-author .fn a:focus,
-.comment-list .comment-author .fn a:active {
+.comment-list .comment-author .fn a:active,
+.comment-list .comment-metadata a:hover,
+.comment-list .comment-metadata a:focus,
+.comment-list .comment-metadata a:active {
   color: #999;
 }
 
@@ -2402,8 +2419,7 @@ body.has-responsive-menu {
 }
 
 .comment-list .edit-link {
-  margin-left: 15px;
-  margin-left: 0.9375rem;
+  display: none;
 }
 
 .comment-list .comment-awaiting-moderation {
